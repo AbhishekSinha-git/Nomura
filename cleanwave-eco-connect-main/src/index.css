@@ -1,0 +1,119 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CleanWave Design System - Ocean Blues, Sandy Beiges, Coral Accents, Custom Blues & Greens */
+
+@layer base {
+  :root {
+    --background: 250 100% 98%;
+    --foreground: 210 50% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 50% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 50% 15%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 45 30% 85%;
+    --secondary-foreground: 210 50% 15%;
+
+    --muted: 45 30% 90%;
+    --muted-foreground: 210 20% 40%;
+
+    --accent: 8 100% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 210 100% 50%;
+
+    --radius: 0.75rem;
+
+    --ocean-light: 200 100% 95%;
+    --ocean-medium: 210 100% 50%;
+    --ocean-dark: 210 100% 35%;
+    --sand-light: 45 50% 92%;
+    --sand-medium: 45 30% 85%;
+    --coral: 8 100% 65%;
+    --coral-dark: 8 100% 55%;
+    
+    /* Custom colors as requested */
+    --clean-blue: 193 55% 81%; /* #b3dee2 */
+    --clean-green: 74 40% 90%; /* #eaf2d7 */
+  }
+
+  .dark {
+    --background: 210 50% 8%;
+    --foreground: 200 100% 95%;
+
+    --card: 210 50% 10%;
+    --card-foreground: 200 100% 95%;
+
+    --popover: 210 50% 10%;
+    --popover-foreground: 200 100% 95%;
+
+    --primary: 210 100% 60%;
+    --primary-foreground: 210 50% 8%;
+
+    --secondary: 45 20% 20%;
+    --secondary-foreground: 200 100% 95%;
+
+    --muted: 45 20% 15%;
+    --muted-foreground: 210 20% 70%;
+
+    --accent: 8 100% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 30% 20%;
+    --input: 210 30% 20%;
+    --ring: 210 100% 60%;
+    
+    /* Custom colors for dark mode */
+    --clean-blue: 193 45% 71%;
+    --clean-green: 74 30% 80%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-clean-blue to-clean-green text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .ocean-gradient {
+    @apply bg-gradient-to-r from-ocean-medium to-ocean-dark;
+  }
+  
+  .sand-gradient {
+    @apply bg-gradient-to-r from-sand-light to-sand-medium;
+  }
+  
+  .coral-gradient {
+    @apply bg-gradient-to-r from-coral to-coral-dark;
+  }
+  
+  .clean-blue-gradient {
+    @apply bg-gradient-to-r from-clean-blue to-ocean-light;
+  }
+  
+  .clean-green-gradient {
+    @apply bg-gradient-to-r from-clean-green to-sand-light;
+  }
+}
